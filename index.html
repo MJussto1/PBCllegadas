@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="15"> 
+    <title>FIDS - LLEGADAS</title>
+    <style>
+        body { background-color: #000000; color: #FFFFFF; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 30px; overflow: hidden; }
+        
+        /* HEADER OPTIMIZADO PARA LOGOTIPOS SUPERIORES */
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 5px solid #FFB300; padding-bottom: 15px; margin-bottom: 25px; }
+        .logos-izquierda { display: flex; align-items: center; gap: 20px; }
+        .logo-top-aip { max-height: 65px; width: auto; }
+        .logo-top-gmm { max-height: 65px; width: auto; border-radius: 4px; }
+        .header h1 { margin: 0; color: #FFB300; font-size: 2.6rem; text-transform: uppercase; font-weight: 800; }
+        .clock { color: #FFFFFF; font-size: 2.5rem; font-weight: bold; }
+        
+        .fids-section { width: 100%; }
+        .fids-section h2 { font-size: 2.5rem; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; }
+        
+        table { width: 100%; border-collapse: collapse; font-size: 2.4rem; font-weight: bold; }
+        th { text-align: left; color: #8E8E93; border-bottom: 3px solid #2C2C2E; padding: 12px; font-size: 1.7rem; text-transform: uppercase; }
+        td { padding: 20px 12px; border-bottom: 1px solid #1C1C1E; vertical-align: middle; }
+        
+        .vuelo { color: #FFB300; }
+        .destino { color: #FFFFFF; }
+        .hora { color: #FFFFFF; }
+        .sala { color: #FFFFFF; }
+        .estatus { text-transform: uppercase; }
+        .estatus-a-tiempo { color: #00FF00; }
+        .estatus-demorado { color: #FF3B30; }
+        
+        .logo-aerolinea { max-height: 35px; width: auto; display: block; }
+        
+        .resaltado { background-color: #b45309 !important; animation: blink 2s infinite; }
+        .resaltado td, .resaltado .vuelo { color: #ffffff !important; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logos-izquierda">
+            <img src="recursos/logoAIP.png" alt="Logo AIP" class="logo-top-aip">
+            <img src="recursos/LogoGMM.jpg" alt="Logo GMM" class="logo-top-gmm">
+            <h1>Llegadas / Arrivals</h1>
+        </div>
+        <div class="clock" id="liveClock">00:00</div>
+    </div>
+
+    <div class="fids-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Origen</th>
+                    <th>Aerolínea</th>
+                    <th>Vuelo</th>
+                    <th>Hora</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="vuelo">CUN</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">3554</td>
+                    <td class="hora">16:38:00</td>
+                    <td class="estatus estatus-a-tiempo">16:38:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">SJD</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">645</td>
+                    <td class="hora">18:24:00</td>
+                    <td class="estatus estatus-a-tiempo">18:24:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">GDL</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">1396</td>
+                    <td class="hora">19:37:00</td>
+                    <td class="estatus estatus-a-tiempo">19:37:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">LAX</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">1782</td>
+                    <td class="hora">20:44:00</td>
+                    <td class="estatus estatus-a-tiempo">20:44:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">TIJ</td>
+                    <td><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea"></td>
+                    <td class="destino">5116</td>
+                    <td class="hora">21:00:00</td>
+                    <td class="estatus estatus-a-tiempo">20:44:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">GDL</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">3344</td>
+                    <td class="hora">21:15:00</td>
+                    <td class="estatus estatus-a-tiempo">21:15:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">BJX</td>
+                    <td><img src="recursos/v.png" alt="Volaris" class="logo-aerolinea"></td>
+                    <td class="destino">605</td>
+                    <td class="hora">21:48:00</td>
+                    <td class="estatus estatus-a-tiempo">21:48:00</td>
+                </tr>
+                <tr class="">
+                    <td class="vuelo">MTY</td>
+                    <td><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea"></td>
+                    <td class="destino">4008</td>
+                    <td class="hora">22:15:00</td>
+                    <td class="estatus estatus-a-tiempo">22:15:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('liveClock').textContent = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+        }
+        setInterval(updateClock, 1000); updateClock();
+    </script>
+</body>
+</html>
